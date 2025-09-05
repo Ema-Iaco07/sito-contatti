@@ -9,19 +9,27 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+
+    /* per centrare il contenitore */
     display: flex;
-    flex-direction: column;
+    justify-content: center;  /* centro orizzontale */
+    align-items: center;      /* centro verticale */
+    min-height: 100vh;        /* serve per l'altezza piena */
 }
 
 .contenitore-supremo {
-    background: linear-gradient( to bottom, rgb(48, 48, 48), rgb(0, 0, 0));
+    background: linear-gradient(to bottom, rgb(48, 48, 48), rgb(0, 0, 0));
     border-radius: 40px;
     flex-direction: column;
     width: 300px;
-    margin-left: -35px;
-    margin-top: 100px;
     height: 600px;
+
+    /* tolgo i margin che lo spostavano */
+    margin: 0;
+    display: flex; /* così funziona anche flex interno */
 }
+
+/* --- resto invariato --- */
 
 .inizio-profilo {
     width: 100%;
@@ -57,13 +65,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px
+    gap: 20px;
 }
 
 .instagram-svg {
     fill: white;
 }
 
+/* Mobile */
 @media screen and (max-width:430px) {
     body {
         background-image: url(images/foto.jpg);
@@ -71,8 +80,15 @@ body {
         background-size: cover;
         background-position-x: center;
         background-attachment: fixed;
-        align-items: center;
+
+        /* resta centrato anche su mobile */
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenitore-supremo {
+        width: 90%;   /* adattabile al piccolo schermo */
+        height: auto; /* non forzare altezza fissa */
     }
 }
