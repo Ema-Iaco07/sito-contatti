@@ -10,23 +10,25 @@ body {
     background-size: cover;
     background-attachment: fixed;
 
+    /* per centrare il contenitore */
     display: flex;
     justify-content: center;   /* centro orizzontale */
     align-items: center;       /* centro verticale */
-    min-height: 100vh;         /* il body deve coprire tutta la pagina */
+    min-height: 100vh;         /* body copre tutta la finestra */
 }
-
 
 .contenitore-supremo {
     background: linear-gradient(to bottom, rgb(48, 48, 48), rgb(0, 0, 0));
     border-radius: 40px;
-    flex-direction: column;
-    width: 300px;
-    height: 90vh;   /* occupa il 90% dell'altezza */
-    margin: 0;
-    display: flex; /* per i figli */
-}
 
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;   /* 90% della larghezza del viewport */
+    height: 80vh; /* 80% dell’altezza del viewport */
+
+    margin: 0; /* tolgo margini inutili */
+}
 
 /* --- resto invariato --- */
 
@@ -73,12 +75,20 @@ body {
 
 /* Mobile */
 @media screen and (max-width:430px) {
+    body {
+        background-image: url(images/foto.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-attachment: fixed;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .contenitore-supremo {
-        width: 90%;   /* adattabile alla larghezza */
-        height: 90vh; /* anche su mobile occupa 90% dell'altezza */
+        width: 90%;   /* resta al 90% */
+        height: 80vh; /* resta all’80% */
     }
 }
-
-}
-
-
