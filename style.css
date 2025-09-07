@@ -22,12 +22,11 @@ body {
     border-radius: 40px;
     flex-direction: column;
     width: 300px;
-    height: 600px;
-
-    /* tolgo i margin che lo spostavano */
+    height: 90vh;   /* occupa il 90% dell'altezza */
     margin: 0;
-    display: flex; /* così funziona anche flex interno */
+    display: flex; /* per i figli */
 }
+
 
 /* --- resto invariato --- */
 
@@ -74,21 +73,11 @@ body {
 
 /* Mobile */
 @media screen and (max-width:430px) {
-    body {
-        background-image: url(images/foto.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-x: center;
-        background-attachment: fixed;
-
-        /* resta centrato anche su mobile */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .contenitore-supremo {
-        width: 90%;   /* adattabile al piccolo schermo */
-        height: auto; /* non forzare altezza fissa */
+        width: 90%;   /* adattabile alla larghezza */
+        height: 90vh; /* anche su mobile occupa 90% dell'altezza */
     }
 }
+
+}
+
