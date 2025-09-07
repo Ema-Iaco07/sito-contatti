@@ -18,9 +18,8 @@ body {
 }
 
 .contenitore-supremo {
-    background: linear-gradient(to bottom, rgb(52, 72, 89), rgb(0, 0, 0));
+    background: linear-gradient(to bottom, rgba(52, 72, 89, 0.274), rgb(0, 0, 0));
     border-radius: 40px;
-
     display: flex;
     flex-direction: column;
 
@@ -28,6 +27,8 @@ body {
     height: 80vh; /* 80% dell’altezza del viewport */
 
     margin: 0; /* tolgo margini inutili */
+    box-shadow: 0 0 40px 5px;
+    backdrop-filter: blur(20px);
 }
 
 /* --- resto invariato --- */
@@ -49,8 +50,9 @@ body {
     background-size: 200px;
     background-position-x: -55px;
     background-repeat: no-repeat;
-    box-shadow: 0 5px 40px 1px;
+    box-shadow: 0 10px 20px 1px rgb(7, 10, 12);
     margin-top: 100px;
+    color:b
 }
 
 .nome {
@@ -58,6 +60,11 @@ body {
     color: white;
     font-size: 20px;
     font-family: sans-serif;
+}
+.sottotitolo {
+    color:white;
+    font-family: sans-serif;
+    margin-top: 200px;
 }
 
 .contatti {
@@ -71,6 +78,22 @@ body {
 
 .instagram-svg {
     fill: white;
+}
+svg {
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+svg:hover {
+    width:60px;
+    height:60px;
+}
+input[type="checkbox"]:checked + label > .foto-profilo{
+    width:420px;
+    height:420px;
+    background-size: 800px;
+    background-position: center;
+}
+#click {
+    display: none;
 }
 
 /* Mobile */
@@ -92,5 +115,3 @@ body {
         height: 80vh; /* resta all’80% */
     }
 }
-
-
