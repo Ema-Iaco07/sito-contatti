@@ -28,7 +28,7 @@ body {
 
     margin: 0; /* tolgo margini inutili */
     box-shadow: 0 0 40px 5px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
 }
 
 /* --- resto invariato --- */
@@ -52,7 +52,6 @@ body {
     background-repeat: no-repeat;
     box-shadow: 0 10px 20px 1px rgb(7, 10, 12);
     margin-top: 100px;
-    color:b
 }
 
 .nome {
@@ -60,11 +59,14 @@ body {
     color: white;
     font-size: 20px;
     font-family: sans-serif;
+        text-shadow: 0 0 10px rgb(0, 0, 0),0 0 20px rgb(0, 0, 0);
 }
 .sottotitolo {
     color:white;
     font-family: sans-serif;
     margin-top: 200px;
+    text-shadow: 0 0 10px rgb(0, 0, 0),
+    0 0 20px rgb(0, 0, 0);
 }
 
 .contatti {
@@ -86,12 +88,7 @@ svg:hover {
     width:60px;
     height:60px;
 }
-input[type="checkbox"]:checked + label > .foto-profilo{
-    width:420px;
-    height:420px;
-    background-size: 800px;
-    background-position: center;
-}
+
 #click {
     display: none;
 }
